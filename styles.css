@@ -1,4 +1,9 @@
 /* General Styles */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
@@ -9,6 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #e0e0e0;
+    overflow-x: hidden;
 }
   
 .container {
@@ -16,8 +22,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
+    width: 700px;
+    max-width: 96dvw;
     text-align: center;
 }
   
@@ -55,8 +61,9 @@ input:focus {
     box-shadow: 0 0 0 2px rgba(32, 76, 254, 0.2);
 }
   
-button {
-    padding: 10px 20px;
+button { 
+    width: 100%;
+    padding: 6px;
     background-color: #204cfe;
     color: white;
     border: none;
@@ -64,18 +71,35 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-top: 10px; 
 }
   
 button:hover {
     background-color: #1538b5;
 }
+
+.gen-button {
+    padding: 12px;
+    background-color: rgb(0, 102, 255);
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gen-button:hover {
+    background-color: rgb(144, 208, 238);
+}
   
 /* Badge Container */
 .badge-container {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .badge {
+    width: 100%;
     margin-bottom: 20px;
     padding: 15px;
     background: #333333;
@@ -94,6 +118,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    align-items: center;
 }
 
 .code {
@@ -102,17 +128,18 @@ button:hover {
     border-radius: 4px;
     font-family: monospace;
     font-size: 12px;
-    flex-grow: 1;
-    overflow-y: auto;
-    max-height: 100px;
+    width: 100%;
+    max-width: 96dvw;
+    overflow-x: auto;
     word-wrap: break-word;
-    overflow: hidden;
     text-overflow: ellipsis;
     color: #e0e0e0;
     border: 1px solid #404040;
+    max-height: 100px;
 }
 
 .copy-button {
+    width: auto;
     padding: 8px 12px;
     background-color: #204cfe;
     color: white;
@@ -127,6 +154,13 @@ button:hover {
     background-color: #1538b5;
 }
 
+.code .markdown {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
     .container {
@@ -138,20 +172,21 @@ button:hover {
     }
   
     input {
-        font-size: 12px;
+        font-size: 14px;
     }
   
     button {
         font-size: 14px;
+        padding: 10px;
     }
   
     .code {
-        font-size: 10px;
-        max-height: 70px; /* Adjusted for mobile */
+        font-size: 12px;
+        max-width: 100%;
     }
   
     .copy-button {
-        font-size: 10px;
+        font-size: 12px;
         padding: 6px 10px;
     }
 }

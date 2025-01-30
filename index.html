@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Badge Generator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <h1>Badge Generator</h1>
     <div class="input-group">
-        <label for="pluginUrl">Plugin Name:</label>
-        <input type="text" id="pluginUrl" placeholder="Enter Plugin Name">
+      <label for="pluginUrl">Plugin Name:</label>
+      <input type="text" id="pluginUrl" placeholder="Enter Plugin Name">
     </div>
 
     <input type="hidden" id="orgId">
     <input type="hidden" id="productId">
-    
-    <button onclick="generateBadges()">Generate Badges</button>
+
+    <button onclick="generateBadges()" class="gen-button">Generate Badges</button>
 
     <div id="badgeContainer" class="badge-container"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
